@@ -1,0 +1,60 @@
+<html >
+    <head>
+        <title>table</title>
+        <style >
+            div{
+                margin:0%;
+                height: 100px;
+                border: 3px solid red;
+            }
+            body{
+                background-color: rgb(0, 255, 102);
+            }
+            </style>
+    </head>
+    <body onload="con()" id="clr">
+        <script>
+            function vall(){
+                alert("THANKYOU FOR PURCHASE");
+                document.getElementById("demo").innerHTML="purchase confirmed";
+                document.getElementById("clr").style.backgroundColor="violet";
+                document.getElementById("hh").innerHTML=" HAPPY SHOPPING.....HAPPY SHOPPING";
+                
+            }
+            function con(){
+                var result=confirm("Are you willing for SHOPPING :");
+                if(result==true){
+                    var resultconir=confirm("ARE YOU THE MEMBER OF OUR CLUB");
+                    if(resultconir==true){
+                        forr();}
+                    else{
+                      var zz= document.getElementById("zz");
+                      var lo='<form> NAME:<input type:"text" id="nameid" /></br> PHONE:<input type:"phone" id="phoneid" /></br> E-MAIL:<input type:"email" id="mailid" /></br> <button type="submit" id="click here for purchese" onclick="forrr();"></form>';
+                      zz.innerHTML=lo;
+                }}
+                else{
+                    alert("DONE..")
+                    con();
+                }
+            }
+        function forr()
+            {
+                    var rr = document.getElementById("rr");
+                     var tab='<table border="2" cellpadding="2" cellspacing="2"><tr><th>SNO</th><th>ITEM NAME</th><th>price</th></tr><tr><td>1</td><td>Grosories</td><td>40000</td></tr></table>';
+                    rr.innerHTML=tab;
+                    var r=document.getElementById("yy");
+                   var but= '<button type="submit" id="click here for purchese" onclick="vall();">click here for purchase </button> <div><p id =demo> CLICK FOR PURCHESE</p></div></p>';
+                    r.innerHTML=but;
+                    document.getElementById("hh").innerHTML="WELCOME BACK FOR SHOPPING......... HERE YOU GO.....WE FOUND THAT YOU ARE ALREADY REGISTERED";
+                        }
+        function forrr()
+            {
+                   alert("REGISTERED SUCESSFULL-----YOU ARE MEMBER OF CLUB");
+                forr();}
+        </script>
+   <p id="rr"></p>
+   <p id="yy"></p>
+   <p id="zz"></p>
+        <p id="hh"></p>
+            </body>
+</html>
